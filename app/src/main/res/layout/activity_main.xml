@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.nocompany.beautifulplaces.MainActivity">
+
+    <android.support.v4.view.ViewPager
+        android:fitsSystemWindows="true"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+    <com.viewpagerindicator.UnderlinePageIndicator
+        android:layout_marginTop="80dp"
+        android:id="@+id/indicator"
+        android:layout_height="4dp"
+        android:layout_width="fill_parent"
+        app:selectedColor="#77ff0000"
+        app:fadeDelay="1000"
+        app:fadeLength="1000"
+        android:layout_gravity="top"
+        />
+    <!--
+        android:layout_marginTop="?attr/actionBarSize"
+
+
+
+    <com.viewpagerindicator.CirclePageIndicator
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dip"
+        app:strokeColor="#33888888"
+        app:pageColor="#44888888"
+        app:fillColor="#55FF0000"
+        app:radius="10dp"
+        app:fadeDelay="10"
+        app:fadeLength="10"
+    -->
+
+    <android.support.v7.widget.Toolbar
+        android:layout_gravity="top"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppThemeToolBar"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/background"
+        />
+    <!--
+    -->
+</FrameLayout>
