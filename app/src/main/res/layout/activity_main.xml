@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:fitsSystemWindows="true"
+    android:id="@+id/coordinator"
     tools:context="com.nocompany.beautifulplaces.MainActivity">
 
     <android.support.v4.view.ViewPager
@@ -14,6 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />
+
     <com.viewpagerindicator.UnderlinePageIndicator
         android:layout_marginTop="80dp"
         android:id="@+id/indicator"
@@ -24,23 +26,6 @@
         app:fadeLength="1000"
         android:layout_gravity="top"
         />
-    <!--
-        android:layout_marginTop="?attr/actionBarSize"
-
-
-
-    <com.viewpagerindicator.CirclePageIndicator
-        android:id="@+id/indicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dip"
-        app:strokeColor="#33888888"
-        app:pageColor="#44888888"
-        app:fillColor="#55FF0000"
-        app:radius="10dp"
-        app:fadeDelay="10"
-        app:fadeLength="10"
-    -->
 
     <android.support.v7.widget.Toolbar
         android:layout_gravity="top"
@@ -53,6 +38,17 @@
         android:layout_marginTop="24dp"
         android:background="@drawable/background"
         />
-    <!--
-    -->
-</FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_shopping_cart_white_24dp"
+        android:clickable="true"
+        app:elevation="6dp"
+        app:pressedTranslationZ="12dp"
+        android:layout_margin="36dp"
+        app:layout_anchorGravity="bottom|right"
+        app:layout_anchor="@id/pager"
+        android:onClick="fabClicked"
+        />
+</android.support.design.widget.CoordinatorLayout>
